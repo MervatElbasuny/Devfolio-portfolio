@@ -1,0 +1,100 @@
+/* *******************************Start nav section********************************** */
+
+:root{
+    --color-light-blue:#0078ff;
+}
+
+nav{
+    z-index: 10;
+}
+nav .dropdown-menu[data-bs-popper]{
+    top:110%;
+    left: .5rem;
+    width: 13rem;
+}
+nav .inner-drop-down{
+    list-style: none;
+    border: 1px solid;
+    width: 13rem;
+    position: absolute;
+    left: -13rem;
+    bottom: -2.5rem;
+    display: none;
+}
+.secondray-drop-down:hover .inner-drop-down{
+    display: block;
+    transition: all 1s;
+}
+
+nav .dropdown-item:hover{
+    color: red !important;
+}
+.nav-link::after{
+	content: "";
+    background-color: white;
+    width: 0%;
+    height: 5%;
+    position: absolute;
+    top: 2rem;
+    left: 0.6rem;
+    transition: .3s;
+}
+.nav-link:hover::after{
+	width: 70%;
+}
+.navbar-nav li:has(.active) ::after{
+	width: 60%;
+}
+/* *******************************End nav section*************************** */
+
+
+
+
+.home2{
+    background-image:linear-gradient(rgba(0,120,255,.7) ,rgba(0,120,255,.7)) , url("../img/overlay-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    background-attachment: fixed;
+    z-index: 2;
+    max-height: 60vh;
+}
+
+.content h1{
+    font-size: 50px;
+    bottom: 17rem;
+}
+
+.slider .carousel-indicators{
+    bottom: -51px;
+}
+.slider .carousel-indicators [data-bs-target]{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #0078ff;
+
+}
+.slider .carousel-indicators .active{
+    background-color: #0078ff;
+}
+
+
+/* start footer */
+.footer{
+    background-color: #0062d3;
+}
+.scroll-top-button{
+    background-color: var(--color-light-blue);
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 50%; 
+}
+.scroll-top-button i{
+    color: white;
+    font-size: 25px;
+}
